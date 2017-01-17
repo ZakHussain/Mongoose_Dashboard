@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>edit</title>
+</head>
+<body>
+
+		<form action="/slugs/<%= Slugs._id %>", method="post">
+			<input type="text" name="genus" placeholder="genus">
+			<input type="text" name="specie" placeholder="specie">
+			<input type="text" name="color" placeholder="color">
+			<input type="text" name="length" placeholder="length">
+			<input type="text" name="behavior" placeholder="behavior">
+			<input type="submit" value="update">
+		</form>
+
+	<a href="/"><button>Go Back</button></a>
+</body>
+</html>

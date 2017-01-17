@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slug Dashboard</title>
+</head>
+<body>
+	<div>
+		<table>
+			<thead>
+				<th>Genus</th>
+				<th>Species</th>
+				<th>Color</th>
+				<th>Length</th>
+				<th>behavior</th>
+				<th>Display all Info</th>
+				<th>Edit Info</th>
+			</thead>
+			<tbody>
+				<% for (slug in Slugs){ %> 
+					<tr>	
+						<td><%= Slugs[slug].genus %></td>
+						<td><%= Slugs[slug].species %></td>
+						<td><%= Slugs[slug].description.color %></td>
+						<td><%= Slugs[slug].description.length %></td>
+						<td><%= Slugs[slug].description.behavior%></td>
+						<td><a href="/slugs/<%=Slugs[slug]._id%>"><button>More Info</button></td></a>
+						<td><a href="/slugs/<%=Slugs[slug]._id%>/edit"><button>Edit Info</button></td></a>
+						<td><a href="/slugs/<%=Slugs[slug]._id%>/destroy"><button>Remove</button></td></a>
+					</tr>
+				<% } %>
+			</tbody>
+		</table>
+	</div>
+	<a href="/slugs/new"><button>Add Slug</button></a>
+</body>
+</html>

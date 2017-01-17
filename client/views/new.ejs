@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>new slugs</title>
+	<title>Slug Dashboard</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type ="text/javascript">
+		$(document).ready(function (){
+
+		})
+	</script>
+</head>
+<body>
+	displays a form for making a new mongoose
+	<form action="/slugs", method="post">
+		<input type="text" name="genus" placeholder="genus">
+		<input type="text" name="specie" placeholder="specie">
+		<input type="text" name="color" placeholder="color">
+		<input type="text" name="length" placeholder="length">
+		<input type="text" name="behavior" placeholder="behavior">
+		<input type="submit" value="submit">
+	</form>
+	<a href="/"><button>Go Back</button></a>
+</body>
+</html>
